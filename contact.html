@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="conatct.css">
+  <title>Contact Information</title>
+</head>
+<body>
+  <header>
+    <h1>Contact Information</h1>
+    <p>Feel free to reach out to us. Fill in the form below with your contact details.</p>
+  </header>
+
+  <main>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Contact Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+      <small>Enter a 10-digit phone number.</small>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2024 My Website</p>
+  </footer>
+
+  <script>
+    function submitForm() {
+      
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const message = document.getElementById("message").value;
+
+      // Display the collected data (you can modify this part as needed)
+      alert(`Name: ${name}\nEmail: ${email}\nContact Number: ${phone}\nMessage: ${message}`);
+    }
+  </script>
+</body>
+</html>
